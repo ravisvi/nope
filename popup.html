@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	Enter the string you want to block!
+	<br />
+	<br />
+	<input type="text" id="string_to_block"></input>
+	<br />
+	<br />
+	<button onclick= "add_string()" value="Block">Submit</button>
+	<br />
+	<br />
+	<div id = "result_message" style="display:none">
+
+	</div>
+	
+
+</body>
+<script>
+	function add_string(){
+		var el = document.getElementById("string_to_block");
+		var str = el.value;
+		console.log(str);
+		if(str.length>0){
+			console.log("Entered in the if");
+			var res = document.getElementById("result_message");
+			console.log(res);
+			res.innerHTML = str+" has been added to block list";
+			res.style.display = "block";	
+		}
+		
+	}
+</script>
+</html>

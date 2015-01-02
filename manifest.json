@@ -1,0 +1,29 @@
+{
+	"manifest_version": 2,
+
+	"name":"Nope",
+	"version":"0.1",
+	"description":"To block certain annoying information appearing on facebook feed.",
+
+	"icons":{
+		"128":"images/logo.png"
+	},
+
+	"permissions": [
+    	"https://www.facebook.com/*",
+    	"http://www.facebook.com/*",
+    	"tabs",
+    	"storage"
+  	],
+
+  	"background": {
+    	"scripts": ["bootstrap.js"],
+    	"persistent": false
+  	},
+
+  	"browser_action": {
+    	"default_title": "Nope",
+    	"default_icon": "images/logo.png",
+    	"default_popup": "popup.html"
+  	}
+}
